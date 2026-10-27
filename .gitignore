@@ -1,0 +1,13 @@
+# logs from local debugging
+*.log
+debug.log
+
+# tooling / OS noise
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editor
+.vscode/
+.idea/

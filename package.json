@@ -1,0 +1,44 @@
+{
+  "name": "@local/deepseek-wallpaper",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Animated DeepSeek-chan wallpaper for the DeepSeek Harness Web UI: a looping midnight artwork behind the window with translucent blue-glass surfaces.",
+  "license": "MIT",
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "bundle",
+    "wallpaper",
+    "animated-background"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "bg.mp4",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "preview.jpg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  }
+}
